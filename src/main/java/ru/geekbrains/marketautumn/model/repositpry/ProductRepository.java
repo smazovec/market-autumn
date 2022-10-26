@@ -31,4 +31,8 @@ public class ProductRepository {
     return new ArrayList<>(products); // immutable properties
   }
 
+  public void deleteById(Long id) {
+    products.removeIf(p -> p.getId().equals(id));
+  }
+
 }
