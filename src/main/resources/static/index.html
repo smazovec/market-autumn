@@ -31,6 +31,15 @@
       <td>{{p.coast}}</td>
     </tbody>
   </table>
+  <p></p>
+  <h3>Добавить продукт</h3>
+  <form novalidate ng-submit="createProductJson()">
+    <input class="form-control" type="text" placeholder="Название продукта" ng-model="newProductJson.title">
+    <p></p>
+    <input class="form-control" type="number" placeholder="Цена продукта" ng-model="newProductJson.coast">
+    <p></p>
+    <button type="submit" class="btn btn-primary">Сохранить продукт</button>
+  </form>
 </div>
 </body>
 </html>

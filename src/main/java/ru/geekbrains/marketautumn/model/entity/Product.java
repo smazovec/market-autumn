@@ -11,10 +11,12 @@ import lombok.Data;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import ru.geekbrains.marketautumn.model.dto.ProductDto;
 
 @Entity
 @Table(name = "products")
 @Getter
+@NoArgsConstructor
 public class Product {
 
   @Id
@@ -27,5 +29,10 @@ public class Product {
 
   @Column(name = "coast")
   private int coast;
+
+  public Product(ProductDto productDto) {
+    this.title = productDto.getTitle();
+    this.coast = productDto.getCoast();
+  }
 
 }
