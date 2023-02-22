@@ -7,13 +7,11 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 import lombok.Data;
-import lombok.Getter;
-import lombok.Setter;
 
 @Entity
 @Data
-@Table(name = "clients")
-public class Client {
+@Table(name = "roles")
+public class Role {
 
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -22,5 +20,8 @@ public class Client {
 
   @Column(name = "name")
   private String name;
+
+  @Column(name = "enabled")
+  private Boolean enabled;
 
 }
